@@ -1,0 +1,14 @@
+# Výstupy kompilace
+bin/
+obj/
+ 
+# Visual Studio
+.vs/
+ 
+# Uživatelské nastavení
+*.user
+*.suo
+ 
+# Systémové soubory
+.DS_Store
+Thumbs.db

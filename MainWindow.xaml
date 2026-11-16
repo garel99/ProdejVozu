@@ -1,0 +1,38 @@
+<Window x:Class="ProdejVozu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Evidence prodaných vozů"
+        Height="650" Width="900">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Načíst XML soubor"
+                Width="160"
+                Height="35"
+                HorizontalAlignment="Left"
+                Click="NacistXML_Click"/>
+
+        <DataGrid x:Name="dgVozidla"
+                  Grid.Row="1"
+                  Margin="0,10,0,10"
+                  AutoGenerateColumns="True"
+                  IsReadOnly="True"/>
+
+        <TextBlock Grid.Row="2"
+                   Text="Souhrn víkendových prodejů"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   Margin="0,10"/>
+
+        <DataGrid x:Name="dgVysledky"
+                  Grid.Row="3"
+                  AutoGenerateColumns="True"
+                  IsReadOnly="True"/>
+    </Grid>
+</Window>
